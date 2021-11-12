@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\AlumnoController;
-use App\Http\Controllers\EmpresaController;
-use App\Http\Controllers\UsersController;
+use App\Http\Livewire\Cursos\CursosIndex;
+use App\Http\Livewire\Libros\DeleteLibros;
+use App\Http\Livewire\Libros\EditLibros;
+use App\Http\Livewire\Libros\IndexLibros;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/alumnos/create', [AlumnoController::class, "create"]);
-Route::get('/empresas/create', [EmpresaController::class, "create"]);
-Route::get('/users', [UsersController::class, "index"]);
-Route::get('/users/create', [UsersController::class, "create"]);
+
+Route::get('/libros', IndexLibros::class)->name("libros.index");
+Route::get('/libros/{libro}/edit', EditLibros::class)->name("libros.edit");
+Route::get('/libros/{libro}/delete', DeleteLibros::class)->name("libros.delete");
+
