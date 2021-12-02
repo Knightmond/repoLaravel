@@ -9,11 +9,11 @@ class RulesLibro
     {
         return
             [
-                'libro.titulo' => 'required|string',
+                /*'libro.titulo' => 'required|string',
                 'libro.editorial' => 'required|string',
                 'libro.autor' => 'required|string',
                 'libro.fecha_lanzamiento' => 'required|string',
-                'libro.foto' => 'nullable|image'
+                'foto' => 'nullable|image'*/
             ];
     }
 }
