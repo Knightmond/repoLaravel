@@ -10,7 +10,7 @@
             <img style="width:230px;height:230px;" src="{{ $foto->temporaryUrl() }}" alt="">
         @else
             <img style="width:230px;height:230px;"
-            src="{{ Storage::disk("public")->url($libro->foto != null ? $libro->foto : "images/libros/default.png") }}" alt="">
+            src="{{ Storage::disk("public")->url($libro->foto ? $libro->foto : "images/libros/default.png") }}" alt="">
         @endif
 
         <form>

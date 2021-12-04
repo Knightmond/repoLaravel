@@ -29,6 +29,7 @@
                 <th scope="col">Editorial</th>
                 <th scope="col">Autor</th>
                 <th scope="col">Fecha de lanzamiento</th>
+                <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
