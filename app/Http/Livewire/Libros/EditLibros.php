@@ -7,11 +7,12 @@ use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
-class EditLibros extends Component
-{
+class EditLibros extends Component {
+
     use WithFileUploads;
     public Libro $libro;
     public $foto;
+
     public function render() {
         return view('livewire.libros.edit-libros');
     }

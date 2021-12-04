@@ -44,8 +44,8 @@
 
         <div class="form-group">
             <label>Confirmar contraseña</label>
-            <input wire:model.defer="libro.fecha_lanzamiento" type="password" class="form-control">
-            @error('libro.fecha_lanzamiento') <span class="text-danger">{{ $message }}</span>@enderror
+            <input wire:model="verPassword" type="password" class="form-control">
+            @error('verPassword') <span class="text-danger">{{ $message }}</span>@enderror
         </div>
     </div>
 

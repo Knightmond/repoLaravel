@@ -13,8 +13,7 @@ class IndexLibros extends Component {
     public $search;
     public $cargado = false;
 
-    public function render()
-    {
+    public function render() {
         $libros = ($this->cargado == true) ? Libro::where("titulo", "LIKE", "%".$this->search."%")
             ->orwhere("editorial", "LIKE", "%".$this->search."%")
             ->orwhere("autor", "LIKE", "%".$this->search."%")

@@ -16,5 +16,5 @@
             <button wire:click="delete" class="btn btn-danger btn-sm">Eliminar</button>
             <a href="{{route('libros.index')}}" class="btn btn-secondary btn-sm">Cancelar</a>
         </div>
-      </div>
+    </div>
 </div>

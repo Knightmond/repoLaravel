@@ -7,6 +7,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 
 class IndexUsuarios extends Component {
+
     protected $paginationTheme = "bootstrap";
     use WithPagination;
     public $search;

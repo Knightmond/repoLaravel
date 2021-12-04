@@ -22,7 +22,6 @@ class CreateLibros extends Component {
     }
 
     public function crear() {
-
         $this->validate();
         if ($this->foto != null) {
             $this->libro->foto = Storage::disk("public")->put("images/libros", $this->foto);
@@ -32,6 +31,6 @@ class CreateLibros extends Component {
     }
 
     protected function rules() {
-        return RulesLibro::Reglas();
+        return RulesLibro::reglas();
     }
 }
