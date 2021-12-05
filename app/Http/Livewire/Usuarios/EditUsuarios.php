@@ -11,7 +11,7 @@ class EditUsuarios extends Component {
 
     use WithFileUploads;
     public Usuario $usuario;
-    public $verPassword;
+    public $confirmar_password;
     public $foto;
 
     public function render() {
@@ -20,17 +20,17 @@ class EditUsuarios extends Component {
 
     public function editar() {
         $this->validate();
-        if ($this->foto != null) {
-            if($this->usuario->foto != null) {
-                Storage::disk("public")->delete("images/usuarios/", $this->foto);
+        if ($this->foto) {
+            if($this->usuario->foto) {
+                Storage::disk("public")->delete($this->usuario->foto);
             }
             $this->usuario->foto = Storage::disk("public")->put("images/usuarios", $this->foto);
         }
-        $this->usuario->save();
-        return redirect(route("usuarios.index"));
+        //$this->usuario->save();
+        //return redirect(route("usuarios.index"));
     }
 
     protected function rules() {
-        return RulesUsuario::reglas();
+        return RulesUsuario::reglas($this->usuario->id);
     }
 }

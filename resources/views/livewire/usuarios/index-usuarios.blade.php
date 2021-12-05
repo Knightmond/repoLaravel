@@ -35,7 +35,7 @@
                     <tr>
                         <th scope="row">{{$usuario->id}}</th>
                         <th>
-                            <img style="width: 35px;height:35px;"
+                            <img style="border-radius:35px;width: 35px;height:35px;"
                                 src="{{Storage::disk("public")->url($usuario->foto ? $usuario->foto : 'images/usuarios/default.png') }}" alt="">
                         </th>
                         <td>{{$usuario->nombre_usuario}}</td>
