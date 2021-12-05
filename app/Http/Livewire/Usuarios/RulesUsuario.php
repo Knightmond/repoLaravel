@@ -7,12 +7,14 @@ class RulesUsuario
 
     public static function reglas($id = null)
     {
+        $valPassword = ($id) ? "nullable|min:8" : "required|min:8";
+
         return
             [
                 'usuario.nombre_usuario' => 'required|string',
                 'usuario.email' => 'required|email|unique:usuarios,email,'.$id,
-                'usuario.password' => 'nullable|min:8',
-                'confirmar_password' => 'same:usuario.password',
+                'password' => $valPassword,
+                'confirmar_password' => 'same:password',
                 'foto' => 'nullable|image'
             ];
     }

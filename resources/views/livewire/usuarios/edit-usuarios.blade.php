@@ -9,7 +9,7 @@
             </div>
             <div class="card-footer text-muted">
                 <button wire:loading.attr="disabled" wire:target="foto" class="btn btn-primary btn-sm">
-                    <i class="fa fa-iedit"></i> Modificar</button>
+                    <i class="fa fa-edit"></i> Modificar</button>
                 <a href="{{ route('usuarios.index') }}" class="btn btn-secondary btn-sm">Regresar</a>
             </div>
         </div>
